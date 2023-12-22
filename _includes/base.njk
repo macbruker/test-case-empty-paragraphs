@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title | safe }}</title>
+    <style>
+        html { 
+            background-color: beige;
+            font-family: system-ui, sans-serif;
+        }
+        img { 
+            max-inline-size: 100%; 
+            block-size: auto;
+            border-radius: 0.25em;
+        }
+        main {
+            max-inline-size: max-content;
+            margin-inline: auto;
+        }
+        figure {
+            margin-inline: 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>{{ title | safe }}</h1>
+        {{ content | safe }}
+    </main>
+</body>
+</html>

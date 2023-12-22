@@ -1,0 +1,14 @@
+{
+  "name": "test-case-empty-paragraphs",
+  "version": "1.0.0",
+  "description": "Test case for empty paragraphs while overriding markdown images in Eleventy with Eleventy Image.",
+  "scripts": {
+    "start": "eleventy --serve"
+  },
+  "author": "Martin Berglund",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^3.1.8"
+  }
+}
