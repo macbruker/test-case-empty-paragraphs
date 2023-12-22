@@ -4,7 +4,7 @@ const md = require('markdown-it')();
 md.renderer.rules.image = function (tokens, idx, options, env, self) {
   const token = tokens[idx]
   let imgSrc = token.attrGet('src')
-  const imgTitle = token.attrGet('title')
+  const imgCaption = token.attrGet('title')
   const imgAlt = token.content
 
   const imgSize = '640px'
@@ -26,10 +26,10 @@ md.renderer.rules.image = function (tokens, idx, options, env, self) {
       decoding: 'async'
     }, { whitespaceMode: "inline" })
 
-    if (imgTitle) {
+    if (imgCaption) {
       return `<figure>
         ${generatedImage}
-        <figcaption>${imgTitle}</figcaption>
+        <figcaption>${imgCaption}</figcaption>
       </figure>`
     }
 
